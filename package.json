@@ -1,0 +1,36 @@
+{
+  "name": "lmd-monitoring",
+  "version": "1.0.0",
+  "description": "Websites monitoring service",
+  "main": "app.js",
+  "author": {
+    "name": "Les Moulins du Dev"
+  },
+  "scripts": {
+    "build": "tsc --build",
+    "clean": "tsc --build --clean"
+  },
+  "devDependencies": {
+    "@types/node": "^8.0.14",
+    "typescript": "^3.2.2"
+  },
+  "dependencies": {
+    "@types/express": "^4.17.8",
+    "@types/sequelize": "^4.28.9",
+    "@types/validator": "^13.1.0",
+    "bcrypt": "^5.0.0",
+    "express": "^4.17.1",
+    "express-session": "^1.17.1",
+    "module-alias": "^2.2.2",
+    "mysql2": "^2.2.5",
+    "node-fetch": "^2.6.1",
+    "nodemailer": "^6.4.15",
+    "sequelize": "^6.3.5",
+    "ssl-checker": "^2.0.7",
+    "vue": "^2.6.12",
+    "vue-class-component": "^7.2.6"
+  },
+  "_moduleAliases": {
+    "@settings": "./settings.js"
+  }
+}

@@ -1,0 +1,184 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">14.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <Name>lmd-monitoring</Name>
+    <RootNamespace>lmd-monitoring</RootNamespace>
+    <SaveNodeJsSettingsInProjectFile>True</SaveNodeJsSettingsInProjectFile>
+    <LaunchUrl>https://localhost</LaunchUrl>
+    <NodejsPort>443</NodejsPort>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>8e775cde-4614-4c90-af46-37e98c747246</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>monitoring.ts</StartupFile>
+    <StartWebBrowser>False</StartWebBrowser>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <ProjectTypeGuids>{3AF33F2E-1136-4D97-BBB7-1795711AC8B8};{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}</ProjectTypeGuids>
+    <EnableTypeScript>true</EnableTypeScript>
+    <StartWebBrowser>True</StartWebBrowser>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="monitoring.ts" />
+    <Content Include="package.json" />
+    <Content Include="public\css\body.css">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="public\css\content.css">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="public\css\dialog.css">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="public\css\forms.css">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="public\css\header.css">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="public\css\login.css">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="public\css\websites.css">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="public\img\favicon.png" />
+    <Content Include="public\img\delete.svg" />
+    <Content Include="public\img\edit.svg" />
+    <Content Include="public\js\application\application-login.js" />
+    <Content Include="public\js\components\login.js" />
+    <Content Include="public\index.html" />
+    <Content Include="public\monitor.html">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="public\js\components\app.js" />
+    <Content Include="public\js\components\remove-websit-dialog.js" />
+    <Content Include="public\js\components\edit-websit-dialog.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="public\js\components\header.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="public\js\components\websites-list.js" />
+    <Content Include="public\js\components\website-item.js" />
+    <Content Include="public\js\components\websites.js" />
+    <Content Include="public\js\libs\vue\vue.js" />
+    <Content Include="README.md" />
+    <Content Include="settings.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="tsconfig.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="public\" />
+    <Folder Include="public\js\" />
+    <Folder Include="public\css\" />
+    <Folder Include="public\img\" />
+    <Folder Include="public\js\libs\" />
+    <Folder Include="public\js\libs\vue\" />
+    <Folder Include="public\js\application\" />
+    <Folder Include="public\js\components\" />
+    <Folder Include="public\js\models\" />
+    <Folder Include="src\" />
+    <Folder Include="src\models\" />
+    <Folder Include="src\database\" />
+    <Folder Include="src\controllers\" />
+    <Folder Include="src\monitoring-service\" />
+    <Folder Include="src\web-server\" />
+    <Folder Include="src\web-server\ssl\" />
+    <Folder Include="src\web-server\routers\" />
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="public\js\application\application.js">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="public\js\models\monitoring-result.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="public\js\models\status.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="public\js\models\website.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="src\controllers\controller-user.ts" />
+    <TypeScriptCompile Include="src\controllers\controller-website.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="src\database\database.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="src\models\i-website.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="src\models\monitoring-result.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="src\models\user.ts" />
+    <TypeScriptCompile Include="src\models\website.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="src\monitoring-service\monitoring-service.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="src\web-server\routers\api-auth.ts" />
+    <TypeScriptCompile Include="src\web-server\routers\api-website.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="src\web-server\web-server.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+  </ItemGroup>
+  <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsToolsV2.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:48022/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>True</UseCustomServer>
+          <CustomServerUrl>http://localhost:1337</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}" User="">
+        <WebProjectProperties>
+          <StartPageUrl>
+          </StartPageUrl>
+          <StartAction>CurrentPage</StartAction>
+          <AspNetDebugging>True</AspNetDebugging>
+          <SilverlightDebugging>False</SilverlightDebugging>
+          <NativeDebugging>False</NativeDebugging>
+          <SQLDebugging>False</SQLDebugging>
+          <ExternalProgram>
+          </ExternalProgram>
+          <StartExternalURL>
+          </StartExternalURL>
+          <StartCmdLineArguments>
+          </StartCmdLineArguments>
+          <StartWorkingDirectory>
+          </StartWorkingDirectory>
+          <EnableENC>False</EnableENC>
+          <AlwaysStartWebServerOnDebug>False</AlwaysStartWebServerOnDebug>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

@@ -1,0 +1,22 @@
+input {
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 3px;
+    background-color: #1d1d23;
+    border: 1px solid #28589e;
+    color: #ddd;
+}
+
+button {
+    padding: 10px;
+    border: 1px solid #28589e;
+    border-radius: 5px;
+    background: transparent;
+    color: #fff;
+    min-width: 100px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}

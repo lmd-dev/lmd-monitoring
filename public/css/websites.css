@@ -1,0 +1,132 @@
+#websites {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+    #websites > p {
+        text-align: center;
+    }
+
+#websites-list {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.list-header {
+    display: flex;
+    background: #4691ff;
+}
+
+    .list-header > span {
+        display: flex;
+        justify-content: center;
+        padding: 10px;
+        box-sizing: border-box;
+        font-weight: bold;
+    }
+
+.list-body {
+    height: 100%;
+}
+
+.website {
+    cursor: pointer;
+    position: relative;
+    border: 1px solid #2b2b3b;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.website:hover{
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.website-info {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.website-details {
+    width: 100%;
+}
+
+.website-title {
+    margin: 0;
+    font-size: 15px;
+    text-transform: uppercase;
+}
+
+.website-url {
+    font-size: 12px;
+    margin: 0;
+}
+
+.website-controls {
+    display: flex;
+    margin-right: 40px;
+}
+
+.website-control {
+    margin-left: 20px;
+    text-transform: uppercase;
+    font-size: 14px;
+    min-width: fit-content;
+    padding-left: 30px;
+    background-position: left;
+    background-size: 20px;
+    background-repeat: no-repeat;
+}
+
+    .website-control.ok {
+        background: radial-gradient(circle at 10px, #72f972 0px, #5fe85f 6px, #42a942 6px, transparent 8px);
+    }
+
+    .website-control.ko {
+        background: radial-gradient(circle at 10px, #a73333 0px, #a73333 6px, transparent 8px);
+    }
+
+    .website-control.disabled {
+        background: radial-gradient(circle at 10px, #808080 0px, #808080 6px, transparent 6px);
+        color: #777;
+    }
+
+.website-item-action.remove {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 10px;
+    height: 10px;
+    background: url(../img/delete.svg) center no-repeat;
+    background-size: 10px;
+}
+
+
+.website-statuses {
+    display: flex;
+    flex-direction: row-reverse;
+    margin: 0 10px 10px 10px;
+    overflow: hidden;
+}
+
+
+.website-status {
+    width: 3px;
+    min-width: 3px;
+    height: 20px;
+    border-radius: 2px;
+    margin-left: 2px;
+    background: #5fe85f;
+    box-shadow: 0 0 3px rgba(123, 171, 97, 0.9);
+}
+
+
+    .website-status.ko {
+        background: #e23d3d;
+        box-shadow: 0 0 3px #a73333;
+    }
