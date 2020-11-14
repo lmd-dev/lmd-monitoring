@@ -1,3 +1,0 @@
-D:\Xamp\www\lmd\lmd-monitoring\obj\Debug\lmd-monitoring.njsprojAssemblyReference.cache
-D:\Xamp\www\lmd\lmd-monitoring\obj\Debug\lmd-monitoring.njsproj.CoreCompileInputs.cache
-D:\Xamp\www\lmd\lmd-monitoring\bin\Microsoft.NodejsTools.WebRole.dll
